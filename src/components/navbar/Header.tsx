@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProjectStar from "../button/ProjectStar";
 
 function Header() {
   return (
@@ -42,6 +43,7 @@ function Header() {
               </Link>
             </h1>
           </div>
+          <ProjectStar />
         </div>
       </div>
     </header>
