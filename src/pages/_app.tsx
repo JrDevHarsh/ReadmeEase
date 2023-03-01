@@ -1,3 +1,4 @@
+import Footer from "@/components/navbar/Footer";
 import Header from "@/components/navbar/Header";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={poppins.className}>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }
