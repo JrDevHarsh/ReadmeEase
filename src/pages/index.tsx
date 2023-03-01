@@ -12,6 +12,12 @@ export default function Home() {
           <div className="px-6 py-4 w-full">
             <div className="inline-block py-10 w-full">
               <div className="py-10 flex flex-col items-center justify-center w-full">
+                <div className="my-4 mx-auto px-3 py-2 bg-gradient-to-r from-primary-dark-900 to-primary-dark-800">
+                  <p className="text-lg sm:text-2xl md:text-4xl text-center text-primary-text-600 font-medium tracking-wide">
+                    We are launching{" "}
+                    <span className="text-primary-orange">soon!</span>
+                  </p>
+                </div>
                 <div className="mx-auto py-5 flex flex-col items-center justify-between max-w-2xl w-full">
                   <h2 className="text-lg sm:text-2xl lg:text-3xl text-center text-primary-text-500 font-medium tracking-wide">
                     Streamline your documentation process with
