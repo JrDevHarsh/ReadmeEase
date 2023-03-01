@@ -1,14 +1,15 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Editor from "@monaco-editor/react";
-import { useState } from "react";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 function EditorContainer() {
-  const [code, setCode] = useState<string>("");
+  const [code, updateLocalStorage] = useLocalStorage("code", "");
 
   function handleOnChange(val: any) {
-    setCode(val);
+    updateLocalStorage(val);
   }
+
   return (
     <>
       <div className="relative flex flex-col items-start justify-start min-w-[280px] w-full max-w-full md:max-w-[50%] h-auto overflow-y-hidden">
