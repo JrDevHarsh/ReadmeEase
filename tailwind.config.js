@@ -15,6 +15,8 @@ module.exports = {
         "primary-dark-800": "#333333",
         "primary-text-700": "#999999",
         "primary-text-600": "#f1f1f1",
+        "primary-text-500": "#b7b6c0",
+        "primary-orange": "#e56643",
       },
     },
   },
