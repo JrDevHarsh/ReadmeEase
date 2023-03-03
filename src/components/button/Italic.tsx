@@ -1,5 +1,5 @@
 function Italic({ updateEditor }: { updateEditor: Function }) {
-    // function to make text bold
+    // function to make text italic
     function textToItalic(text: string) {
       text = `*${text}*`;
       return text;

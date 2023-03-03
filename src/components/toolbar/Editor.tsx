@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Bold from "../button/Bold";
 import Italic from "../button/Italic";
+import HrefLink from "../button/Link";
 
 function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
   const [toolbarIsOpen, setToolbarIsOpen] = useState<boolean>(false);
@@ -11,6 +12,7 @@ function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
         <div className="mr-2 flex items-center justify-center w-auto">
           <Bold updateEditor={updateEditor} />
           <Italic updateEditor={updateEditor} />
+          <HrefLink updateEditor={updateEditor} />
         </div>
       )}
       <button
