@@ -1,3 +1,4 @@
+import NavigateToEditorPage from "@/components/button/NavigateToEditorPage";
 import PageSEO from "@/components/PageSEO";
 
 export default function Home() {
@@ -14,8 +15,8 @@ export default function Home() {
               <div className="py-10 flex flex-col items-center justify-center w-full">
                 <div className="my-4 mx-auto px-3 py-2 bg-gradient-to-r from-primary-dark-900 to-primary-dark-800">
                   <p className="text-lg sm:text-2xl md:text-4xl text-center text-primary-text-600 font-medium tracking-wide">
-                    We are launching{" "}
-                    <span className="text-primary-orange">soon&#33;</span>
+                    We have launch
+                    <span className="text-primary-orange">ed&#33;</span>
                   </p>
                 </div>
                 <div className="mx-auto py-5 flex flex-col items-center justify-between max-w-2xl w-full">
@@ -30,6 +31,9 @@ export default function Home() {
                     high-quality README files. Users can easily design and
                     customize their README files.
                   </p>
+                </div>
+                <div className="mt-4 mx-auto flex items-center justify-center w-full">
+                  <NavigateToEditorPage />
                 </div>
               </div>
             </div>
