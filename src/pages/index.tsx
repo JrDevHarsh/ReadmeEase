@@ -1,3 +1,4 @@
+import NavigateToEditorPage from "@/components/button/NavigateToEditorPage";
 import PageSEO from "@/components/PageSEO";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
                     high-quality README files. Users can easily design and
                     customize their README files.
                   </p>
+                </div>
+                <div className="mt-4 mx-auto flex items-center justify-center w-full">
+                  <NavigateToEditorPage />
                 </div>
               </div>
             </div>
