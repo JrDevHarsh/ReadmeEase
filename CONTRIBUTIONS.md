@@ -16,7 +16,7 @@ This is where you'll be pushing your changes to be reviewed.
 - **Files**
     - Should be in lowercase. e.g `example.css`.
 
-- **Markdown**
+- **Markdown (`.md`)**
     - Should be capitalized. e.g `README.md`, `CONTRIBUTION.md`
 - *Separate words using underscores*(`_`) e.g `my_folder`, `my_file.txt`, `MY_DOCS.md`.
 
