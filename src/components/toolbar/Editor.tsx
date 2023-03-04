@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Bold from "../button/Bold";
+import ImageLink from "../button/Image";
 import Italic from "../button/Italic";
 import HrefLink from "../button/Link";
 
@@ -13,6 +14,7 @@ function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
           <Bold updateEditor={updateEditor} />
           <Italic updateEditor={updateEditor} />
           <HrefLink updateEditor={updateEditor} />
+          <ImageLink updateEditor={updateEditor} />
         </div>
       )}
       <button
