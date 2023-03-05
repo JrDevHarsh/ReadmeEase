@@ -1,5 +1,9 @@
 import { useState } from "react";
 import Bold from "../button/Bold";
+import ImageLink from "../button/Image";
+import Italic from "../button/Italic";
+import HrefLink from "../button/Link";
+import List from "../button/List";
 
 function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
   const [toolbarIsOpen, setToolbarIsOpen] = useState<boolean>(false);
@@ -7,8 +11,12 @@ function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
   return (
     <div className="flex items-center justify-center w-auto">
       {toolbarIsOpen && (
-        <div className="mr-2 flex items-center justify-center gap-x-2 w-auto">
+        <div className="mr-2 flex items-center justify-center w-auto">
           <Bold updateEditor={updateEditor} />
+          <Italic updateEditor={updateEditor} />
+          <HrefLink updateEditor={updateEditor} />
+          <ImageLink updateEditor={updateEditor} />
+          <List updateEditor={updateEditor} />
         </div>
       )}
       <button
