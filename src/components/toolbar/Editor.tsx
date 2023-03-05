@@ -3,6 +3,7 @@ import Bold from "../button/Bold";
 import ImageLink from "../button/Image";
 import Italic from "../button/Italic";
 import HrefLink from "../button/Link";
+import List from "../button/List";
 
 function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
   const [toolbarIsOpen, setToolbarIsOpen] = useState<boolean>(false);
@@ -15,6 +16,7 @@ function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
           <Italic updateEditor={updateEditor} />
           <HrefLink updateEditor={updateEditor} />
           <ImageLink updateEditor={updateEditor} />
+          <List updateEditor={updateEditor} />
         </div>
       )}
       <button
