@@ -2,11 +2,11 @@
 
 ## SETTING UP
 To contribute to this repo, you'll first need to [Fork](https://github.com/JunDevHarsh/ReadmeEase/fork) this repo, on the top right of your screen.
-![Fork Demo](assets/images/fork.png)
+![Fork Demo](./public/images/fork.png)
 
 Once you've forked the repo, create a new branch called `dev`.
 This is where you'll be pushing your changes to be reviewed.
-![Dev Branch](assets/images/dev.png)
+![Dev Branch](./public/images/dev.png)
 
 
 ## **NAMING GUIDELINES**
