@@ -4,6 +4,7 @@ import ImageLink from "../button/Image";
 import Italic from "../button/Italic";
 import HrefLink from "../button/Link";
 import List from "../button/List";
+import ToolSelect from "../dropdown/ToolSelect";
 
 function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
   const [toolbarIsOpen, setToolbarIsOpen] = useState<boolean>(false);
@@ -12,6 +13,7 @@ function EditorToolbar({ updateEditor }: { updateEditor: Function }) {
     <div className="flex items-center justify-center w-auto">
       {toolbarIsOpen && (
         <div className="mr-2 flex items-center justify-center w-auto">
+          <ToolSelect updateEditor={updateEditor} />
           <Bold updateEditor={updateEditor} />
           <Italic updateEditor={updateEditor} />
           <HrefLink updateEditor={updateEditor} />
