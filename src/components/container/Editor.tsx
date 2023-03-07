@@ -7,6 +7,7 @@ import { editor } from "monaco-editor";
 import { useRef } from "react";
 import CopyToClipboard from "../button/CopyToClipboard";
 import DownloadFile from "../button/DownloadFile";
+import FileSize from "../FileSize";
 
 function EditorContainer() {
   const [code, updateLocalStorage] = useLocalStorage("code", "");
@@ -87,7 +88,10 @@ function EditorContainer() {
           <h2 className="pl-2 text-base text-center text-[#bbbcc1] font-medium tracking-wide">
             PREVIEW
           </h2>
-          <DownloadFile value={code} />
+          <div className="flex items-center justify-center gap-x-2 w-auto">
+            <FileSize text={code} />
+            <DownloadFile value={code} />
+          </div>
         </div>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
