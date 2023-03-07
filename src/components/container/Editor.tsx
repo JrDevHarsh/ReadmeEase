@@ -5,6 +5,7 @@ import useLocalStorage from "@/hooks/useLocalStorage";
 import EditorToolbar from "../toolbar/Editor";
 import { editor } from "monaco-editor";
 import { useRef } from "react";
+import CopyToClipboard from "../button/CopyToClipboard";
 
 function EditorContainer() {
   const [code, updateLocalStorage] = useLocalStorage("code", "");
@@ -58,7 +59,10 @@ function EditorContainer() {
           <h2 className="text-base text-center text-[#bbbcc1] font-medium tracking-wide">
             MARKDOWN
           </h2>
-          <EditorToolbar updateEditor={insertText} />
+          <div className="flex items-center justify-center gap-x-2 w-auto">
+            <CopyToClipboard value={code} />
+            <EditorToolbar updateEditor={insertText} />
+          </div>
         </div>
         <Editor
           className="min-h-[calc(100vh-106px)] max-h-[calc(100vh-106px)] h-full overflow-x-hidden"
