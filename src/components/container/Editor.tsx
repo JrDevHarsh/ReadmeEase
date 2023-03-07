@@ -55,7 +55,7 @@ function EditorContainer() {
 
   return (
     <>
-      <div className="relative flex flex-col items-start justify-start min-w-[280px] w-full max-w-full md:max-w-[50%] h-auto overflow-y-hidden">
+      <div className="relative flex flex-col items-start justify-start min-w-[280px] w-full max-w-full md:max-w-[50%] h-auto">
         <div className="p-2 flex items-center justify-between w-full bg-[#1e1f23] border-b border-r border-solid border-b-[#333] border-r-[#333]">
           <h2 className="text-base text-center text-[#bbbcc1] font-medium tracking-wide">
             MARKDOWN

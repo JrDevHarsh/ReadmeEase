@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Tooltip from "../tooltip/Tooltip";
 
 function ToolSelect({ updateEditor }: { updateEditor: Function }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -8,12 +9,12 @@ function ToolSelect({ updateEditor }: { updateEditor: Function }) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu List"
-        title="Headings"
-        className="flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250 z-[11]"
+        className="group relative flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250 z-[11]"
       >
         <span className="text-base text-center text-primary-text-500 font-semibold leading-4">
           H
         </span>
+        {!isOpen && <Tooltip text="Select Headings" />}
       </button>
       {isOpen && (
         <div className="absolute top-full left-1/2 -translate-x-1/2 w-auto h-auto bg-primary-dark-800 rounded overflow-hidden z-[12]">

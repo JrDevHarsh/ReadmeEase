@@ -1,3 +1,5 @@
+import Tooltip from "../tooltip/Tooltip";
+
 function ImageLink({ updateEditor }: { updateEditor: Function }) {
   // function to make text to image link
   function textToImageLink(text: string) {
@@ -8,9 +10,8 @@ function ImageLink({ updateEditor }: { updateEditor: Function }) {
   return (
     <button
       aria-label="Image"
-      title="Image"
       onClick={() => updateEditor("alt-text-of-image", textToImageLink)}
-      className="flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250"
+      className="group relative flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250"
     >
       <span className="text-base text-center text-primary-text-500 italic font-semibold leading-4">
         <svg
@@ -28,6 +29,7 @@ function ImageLink({ updateEditor }: { updateEditor: Function }) {
           />
         </svg>
       </span>
+      <Tooltip text="Add Image" />
     </button>
   );
 }

@@ -1,3 +1,5 @@
+import Tooltip from "../tooltip/Tooltip";
+
 function List({ updateEditor }: { updateEditor: Function }) {
   // function to make a list
   function textToList(text: string) {
@@ -8,9 +10,8 @@ function List({ updateEditor }: { updateEditor: Function }) {
   return (
     <button
       aria-label="List"
-      title="List"
       onClick={() => updateEditor("This is a list", textToList)}
-      className="flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250"
+      className="group relative flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250"
     >
       <span className="text-base text-center text-primary-text-500 italic font-semibold leading-4">
         <svg
@@ -28,6 +29,7 @@ function List({ updateEditor }: { updateEditor: Function }) {
           />
         </svg>
       </span>
+      <Tooltip text="Add new List" />
     </button>
   );
 }

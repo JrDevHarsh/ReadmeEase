@@ -1,3 +1,5 @@
+import Tooltip from "../tooltip/Tooltip";
+
 function CopyToClipboard({ value }: { value: string }) {
   function handleOnCopyToClipboard() {
     navigator.clipboard.writeText(value);
@@ -6,9 +8,8 @@ function CopyToClipboard({ value }: { value: string }) {
   return (
     <button
       aria-label="Copy to clipboard"
-      title="Copy"
       onClick={handleOnCopyToClipboard}
-      className="flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250"
+      className="group relative flex items-center justify-center w-6 h-6 bg-transparent hover:bg-[#ffffff1a] focus-visible:bg-[#ffffff1a] outline-none rounded-sm transition-colors duration-250"
     >
       <span className="text-base text-center text-primary-orange font-semibold leading-4">
         <svg
@@ -26,6 +27,7 @@ function CopyToClipboard({ value }: { value: string }) {
           />
         </svg>
       </span>
+      <Tooltip text="Copy text to clipboard" />
     </button>
   );
 }
