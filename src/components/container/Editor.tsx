@@ -6,6 +6,7 @@ import EditorToolbar from "../toolbar/Editor";
 import { editor } from "monaco-editor";
 import { useRef } from "react";
 import CopyToClipboard from "../button/CopyToClipboard";
+import DownloadFile from "../button/DownloadFile";
 
 function EditorContainer() {
   const [code, updateLocalStorage] = useLocalStorage("code", "");
@@ -82,10 +83,11 @@ function EditorContainer() {
         />
       </div>
       <div className="relative flex flex-col items-start justify-start min-w-[280px] w-full max-w-full md:max-w-[50%] h-auto overflow-y-hidden border-t border-solid border-t-[#333] md:border-t-0">
-        <div className="p-2 flex items-center justify-start w-full bg-[#1e1f23] border-b border-solid border-[#333]">
-          <h2 className="text-base text-center text-[#bbbcc1] font-medium tracking-wide">
+        <div className="flex items-center justify-between w-full bg-[#1e1f23] border-b border-solid border-[#333]">
+          <h2 className="pl-2 text-base text-center text-[#bbbcc1] font-medium tracking-wide">
             PREVIEW
           </h2>
+          <DownloadFile value={code} />
         </div>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
