@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import LinkGithub from "./LinkGithub";
 function ProjectStar(): JSX.Element {
   const [starCount, setStarCount] = useState<number>(0);
 
@@ -38,6 +38,7 @@ function ProjectStar(): JSX.Element {
 
   return (
     <div className="flex items-center justify-center w-auto">
+      <LinkGithub />
       <a
         href="https://github.com/JunDevHarsh/ReadmeEase/"
         target="_blank"
